@@ -1,13 +1,44 @@
 {
   "name": "n8n-nodes-waberes",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "description": "WABeres WhatsApp API node for n8n",
+  "license": "MIT",
+  "author": "Fredo Ronan",
+  "homepage": "https://waberes.fredoronan.web.id",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WABeres/n8n-nodes-waberes"
+  },
+  "main": "index.js",
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": ["dist/credentials/WaberesApi.credentials.js"],
-    "nodes": ["dist/nodes/Waberes/Waberes.node.js"]
+    "credentials": [
+      "dist/credentials/WaberesApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Waberes/Waberes.node.js"
+    ]
   },
-  "keywords": ["n8n-community-node-package"],
+  "scripts": {
+    "copy:icons": "copyfiles -u 1 nodes/**/*.svg dist/nodes/ && copyfiles -f nodes/Waberes/waberes.svg dist/credentials/",
+    "build": "tsc --project tsconfig.json && npm run copy:icons",
+    "dev": "tsc --project tsconfig.json --watch"
+  },
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "whatsapp-automation",
+    "waberes",
+    "whatsapp"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "devDependencies": {
-    "n8n-workflow": "*"
+    "@types/node": "^25.9.2",
+    "copyfiles": "^2.4.1",
+    "n8n-workflow": "*",
+    "typescript": "^5.8.3"
   }
 }

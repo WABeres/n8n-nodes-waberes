@@ -12,8 +12,7 @@
 <div align="center">
 
 <a href="https://www.npmjs.com/package/@waberes/n8n-nodes-waberes" target="_blank">
-
-![npm](https://img.shields.io/npm/v/@waberes/n8n-nodes-waberes)
+<img src="https://img.shields.io/npm/v/@waberes/n8n-nodes-waberes"/>
 </a>
 </div>
 

@@ -12,6 +12,7 @@
 <p align="center">
   <a href="#english">English</a> · <a href="#indonesia">Indonesia</a>
 </p>
+<img width="1584" height="396" alt="173569848-c624317f-42b1-45a6-ab09-f0ea3c247648" src="https://github.com/user-attachments/assets/51f61b9f-bd1c-495e-9ba7-747c7dbbaea2" />
 
 ---
 

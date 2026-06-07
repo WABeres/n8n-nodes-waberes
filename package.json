@@ -1,0 +1,13 @@
+{
+  "name": "n8n-nodes-waberes",
+  "version": "0.1.0",
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": ["dist/credentials/WaberesApi.credentials.js"],
+    "nodes": ["dist/nodes/Waberes/Waberes.node.js"]
+  },
+  "keywords": ["n8n-community-node-package"],
+  "devDependencies": {
+    "n8n-workflow": "*"
+  }
+}

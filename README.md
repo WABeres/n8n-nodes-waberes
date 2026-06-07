@@ -9,6 +9,14 @@
   Send WhatsApp messages and verify webhook signatures via the WABeres API.
 </p>
 
+<div align="center">
+
+<a href="https://www.npmjs.com/package/@waberes/n8n-nodes-waberes" target="_blank">
+
+![npm](https://img.shields.io/npm/v/@waberes/n8n-nodes-waberes)
+</a>
+</div>
+
 <p align="center">
   <a href="#english">English</a> · <a href="#indonesia">Indonesia</a>
 </p>

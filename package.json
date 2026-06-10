@@ -1,6 +1,6 @@
 {
   "name": "@waberes/n8n-nodes-waberes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "WABeres WhatsApp API node for n8n",
   "license": "MIT",
   "author": "Fredo Ronan",

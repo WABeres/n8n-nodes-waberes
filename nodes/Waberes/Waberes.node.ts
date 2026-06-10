@@ -80,7 +80,7 @@ export class Waberes implements INodeType {
                 },
                 default: '',
                 placeholder: '6281234567890',
-                description: 'Nomor telfon tujuan'
+                description: 'Nomor whatsapp tujuan, isi dengan kode negara tanpa simbol +'
             },
             {
                 displayName: 'Message',
@@ -114,7 +114,8 @@ export class Waberes implements INodeType {
                     { name: 'Start', value: 'start' },
                     { name: 'Stop', value: 'stop' },
                 ],
-                default: 'start'
+                default: 'start',
+                description: "start = starting typing signal | stop = stopping typing signal"
             },
             // ── Fields untuk verifySignature ─────────────────────────
             {
@@ -267,15 +268,28 @@ export class Waberes implements INodeType {
                     }
                 }
 
-            } catch (error) {
+            } catch (error: any) {
                 if (this.continueOnFail()) {
                     results.push({
-                        json: { error: (error as Error).message },
+                        json: { 
+                            success: false,
+                            error: error.response?.data?.error ?? error.message,
+                            code: error.response?.data?.code,
+                            statusCode: error.response?.status,
+                         },
                         pairedItem: i
                     });
                     continue;
                 }
-                throw error;
+                
+                throw new NodeOperationError(
+                    this.getNode(),
+                    error.response?.data?.error ?? error.message,
+                    { 
+                        itemIndex: i,
+                        description: error.response?.data?.code, // ← kode error muncul sebagai description
+                    },
+                );
             }
         }
 
